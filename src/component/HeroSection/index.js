@@ -29,7 +29,13 @@ const HeroSection = () => {
         <HeroH1>Welcome to CanWeBe</HeroH1>
         <HeroP>If you want to success leave the CanWeBe to us.</HeroP>
         <HeroBtnWrapper>
-          <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}>
+          <Button
+            primary={true}
+            dark={true}
+            to='signup'
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+          >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>

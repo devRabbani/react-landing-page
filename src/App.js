@@ -1,13 +1,17 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './App.css'
 import Home from './pages'
+import Signin from './pages/signin'
 
 function App() {
   return (
     <BrowserRouter>
-      <Home />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/signin' component={Signin} />
+      </Switch>
     </BrowserRouter>
   )
 }
