@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   MobileIcon,
   Nav,
@@ -12,27 +12,47 @@ import {
 } from './NavbarElements'
 import { FaBars } from 'react-icons/fa'
 
+import { animateScroll as rScroll } from 'react-scroll'
+
 const Navbar = ({ toggle }) => {
+  const [scroll,setScroll]=useState(false)
+
+  const scrollNav=()=>{
+    if (window.scrollY>=90){
+      setScroll(true)
+    }else{
+      setScroll(false)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll',scrollNav)
+  },[])
+
   return (
     <>
-      <Nav>
+      <Nav scrollNow={scroll}>
         <NavbarContainer>
-          <Navlogo to='/'>CanWeBe</Navlogo>
+          <Navlogo to='/' onClick={()=>rScroll.scrollToTop()}>CanWeBe</Navlogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about'>About</NavLinks>
+              <NavLinks smooth=
+              {true} duration={500} spy={true} exact='true' to='about'>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='discover'>Discover</NavLinks>
+              <NavLinks smooth=
+              {true} duration={500} spy={true} exact='true' to='discover'>Discover</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='services'>Services</NavLinks>
+              <NavLinks smooth=
+              {true} duration={500} spy={true} exact='true' to='services'>Services</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='signup'>Sign Up</NavLinks>
+              <NavLinks smooth=
+              {true} duration={500} spy={true} exact='true' to='signup'>Sign Up</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

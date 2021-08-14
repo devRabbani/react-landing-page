@@ -1,54 +1,29 @@
 import React from 'react'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FooterContainer, FooterWrap, SocialIconLink, SocialIcons, SocialLogo, SocialMedia, SocialMediaWrap, WebsiteRights } from './FooterElements'
 
 const Footer = () => {
   return (
     <>
       <FooterContainer>
+
+      
         <FooterWrap>
-          <FooterLinksContainer>
-            <FooterLinkWrapper>
-              <FooterLinkItems>
-                <FooterLinkTitle>About Us </FooterLinkTitle>
-                <FooterLink to='/signin'>SignIn</FooterLink>
-                <FooterLink to='/signin'>About</FooterLink>
-                <FooterLink to='/signin'>How it Works</FooterLink>
-                <FooterLink to='/signin'>Discover</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
-              </FooterLinkItems>
-              <FooterLinkItems>
-                <FooterLinkTitle>About Us </FooterLinkTitle>
-                <FooterLink to='/signin'>SignIn</FooterLink>
-                <FooterLink to='/signin'>About</FooterLink>
-                <FooterLink to='/signin'>How it Works</FooterLink>
-                <FooterLink to='/signin'>Discover</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
-              </FooterLinkItems>
-            </FooterLinkWrapper>
-            <FooterLinkWrapper>
-              <FooterLinkItems>
-                <FooterLinkTitle>About Us </FooterLinkTitle>
-                <FooterLink to='/signin'>SignIn</FooterLink>
-                <FooterLink to='/signin'>About</FooterLink>
-                <FooterLink to='/signin'>How it Works</FooterLink>
-                <FooterLink to='/signin'>Discover</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
-              </FooterLinkItems>
-              <FooterLinkItems>
-                <FooterLinkTitle>About Us </FooterLinkTitle>
-                <FooterLink to='/signin'>SignIn</FooterLink>
-                <FooterLink to='/signin'>About</FooterLink>
-                <FooterLink to='/signin'>How it Works</FooterLink>
-                <FooterLink to='/signin'>Discover</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
-              </FooterLinkItems>
-            </FooterLinkWrapper>
-          </FooterLinksContainer>
+        <SocialMedia>
+          <SocialMediaWrap>
+            <SocialLogo to='/'>CWB</SocialLogo>
+            <WebsiteRights>CWB © {new Date().getFullYear()} All rights reserved</WebsiteRights>
+            <SocialIcons>
+              <SocialIconLink href='/' target="_blank"><FaFacebook/></SocialIconLink>
+              <SocialIconLink href='/' target="_blank"><FaTwitter/></SocialIconLink>
+              <SocialIconLink href='/' target="_blank"><FaInstagram/></SocialIconLink>
+              <SocialIconLink href='/' target="_blank"><FaLinkedin/></SocialIconLink>
+            </SocialIcons>
+          </SocialMediaWrap>
+        </SocialMedia>
         </FooterWrap>
-      </FooterContainer>
+        </FooterContainer>
+     
     </>
   )
 }
