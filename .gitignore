@@ -12,6 +12,7 @@
 /build
 
 # misc
+/video
 .DS_Store
 .env.local
 .env.development.local
